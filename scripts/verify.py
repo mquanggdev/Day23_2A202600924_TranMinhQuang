@@ -55,13 +55,13 @@ def main() -> int:
 
     # 02-prometheus-grafana
     results.append(check("02: Prometheus reachable", http_ok("http://localhost:9090/-/healthy")))
-    results.append(check("02: Grafana reachable", http_ok("http://localhost:3000/api/health")))
+    results.append(check("02: Grafana reachable", http_ok("http://localhost:3001/api/health")))
     results.append(check("02: Alertmanager reachable", http_ok("http://localhost:9093/-/healthy")))
 
     # Verify dashboards loaded (Grafana API)
     try:
         r = requests.get(
-            "http://localhost:3000/api/search?query=Day%2023",
+            "http://localhost:3001/api/search?query=Day%2023",
             auth=("admin", "admin"),
             timeout=3,
         )

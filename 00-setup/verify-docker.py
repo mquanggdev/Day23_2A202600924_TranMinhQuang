@@ -12,7 +12,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-REQUIRED_PORTS = [8000, 9090, 9093, 3000, 3100, 16686, 4317, 4318, 8888]
+REQUIRED_PORTS = [8000, 9090, 9093, 3001, 3100, 16686, 4317, 4318, 8888]
 MIN_RAM_GB = 4.0
 REPORT_PATH = Path(__file__).parent / "setup-report.json"
 
